@@ -1,0 +1,27 @@
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        roman_letter_dict = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D': 500, 'M':1000}
+        unwanted_letters = {('IV','IX'):-2, ('XL','XC'):-20, ('CD','CM'):-200}
+    
+    
+    
+        the_sum = 0
+    
+            
+   
+        for letter in s:
+            for key, value in roman_letter_dict.items():
+                if letter == key:
+                
+                    the_sum += value
+    
+        for key_unwanted, value_unwanted in unwanted_letters.items():
+            for letter_burst in key_unwanted:
+                if letter_burst in s:
+                    the_sum += value_unwanted
+        return the_sum
+             
+        
+        
+        ## not much it's all about how to operate the loops or use it to be more accurate 
+        ## it needs a data structure*
