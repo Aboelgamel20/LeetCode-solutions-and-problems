@@ -1,0 +1,19 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        
+
+        for num in nums:
+            for i in range(nums.index(num) + 1, len(nums)):
+                if num + nums[i] == target:
+                    our_list = [nums.index(num), i]
+                    break
+                
+                  
+        
+        
+        return our_list
+        
+        # here is actually something new which is index() method
+        # this method retruns the index of the element you put inside of it (as an argument)
+        # it's used like this the_list_you_iterate_over.index(the_element_of_the_list_which_you_want_the_index_of)
+        
