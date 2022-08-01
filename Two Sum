@@ -16,4 +16,20 @@ class Solution:
         # here is actually something new which is index() method
         # this method retruns the index of the element you put inside of it (as an argument)
         # it's used like this the_list_you_iterate_over.index(the_element_of_the_list_which_you_want_the_index_of)
+        # also enumerate function return a list of tubles each element has a tuble contain the index(tuble[0])
+        # and the element (tuble[1])
         
+        
+        
+        
+    ## Another solution ##
+    class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        
+        
+        for i, j in enumerate(nums):
+            r = target - j
+            if r in d:
+                list = [nums.index(r), i]
+                
+        return list    
